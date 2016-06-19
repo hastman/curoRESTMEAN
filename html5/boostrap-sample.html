@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</head>
+	<body>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Registro</a></li>
+  <li role="presentation"><a href="#">Perfil</a></li>
+  <li role="presentation"><a href="#">Fotos</a></li>
+</ul>
+
+	<form class="form-horizontal col-md-6">
+	<fieldset>
+
+	<!-- Form Name -->
+	<legend>Registro de Usuario</legend>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="textinput">Nombre de usuario</label>  
+	  <div class="col-md-4">
+	  <input id="textinput" name="textinput" type="text" placeholder="a@a.es" class="form-control input-md" required="">
+	  <span class="help-block">Email</span>  
+	  </div>
+	</div>
+
+	<!-- Password input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="passwordinput">Password</label>
+	  <div class="col-md-4">
+	    <input id="passwordinput" name="passwordinput" type="password" placeholder="pass" class="form-control input-md">
+	    <span class="help-block">Password</span>
+	  </div>
+	</div>
+
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="edad">Edad</label>
+	  <div class="col-md-4">
+	    <input id="edad" name="edad" type="number" placeholder="pass" class="form-control input-md">
+	    <span class="help-block">Edad</span>
+	  </div>
+	</div>
+
+	
+
+	<!-- Select Basic -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="selectbasic">Sexo</label>
+	  <div class="col-md-4">
+	    <select id="selectbasic" name="selectbasic" class="form-control">
+	      <option value="1">Masculino</option>
+	      <option value="2">Femenino</option>
+	    </select>
+	  </div>
+	</div>
+
+	<!-- Button (Double) -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="enviar"></label>
+	  <div class="col-md-8">
+	    <button id="enviar" name="enviar" class="btn btn-success">Enviar</button>
+	    <button id="Cancelar" name="Cancelar" class="btn btn-danger">Cancelar</button>
+	  </div>
+	</div>
+
+	</fieldset>
+	</form>
+<div class="col-md-6">
+<table class="table"> <thead> <tr> <th>#</th> <th>Usuario</th> <th>Sexo</th> <th>Edad</th> </tr> </thead> <tbody> <tr class="active"> <th scope="row">1</th> <td>Pepe</td> <td>M</td> <td>35</td> </tr> <tr> <th scope="row">2</th> <td>juan</td> <td>M</td> <td>45</td> </tr> <tr class="success"> <th scope="row">3</th> <td>Maria</td> <td>F</td> <td>20</td> </tr> <tr> <th scope="row">4</th> <td>Manuel</td> <td>M</td> <td>31</td> </tr> <tr class="info"> <th scope="row">5</th> <td>Juana</td> <td>F</td> <td>55</td> </tr> <tr>  </tbody> </table>
+</table>
+</div>
+
+</body>
+

@@ -1,0 +1,9 @@
+<form>
+	<label for="user">Nombre Usuario <input type="text" id="user" ng-model="model.name"/></label><br>
+	<label for="pass">Password <input type="text" id="pass" ng-model="model.pass"/></label><br>
+	<button ng-click="enviar()">Enviar</button></br>
+</form>
+
+<div>
+	<p> datos introducidos {{model.name}} y  {{model.pass}}</p>
+</div>

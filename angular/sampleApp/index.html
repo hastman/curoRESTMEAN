@@ -1,0 +1,25 @@
+<html ng-app="sampleApp">
+<head>
+	<title>Sample App</title>
+</head>
+<body>
+
+	<div id="menu">
+		<a href="#/alta">Nuevo Usuario</a>
+		<a href="#/listado">Listado</a>
+	</div>
+
+	<div ng-view></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/i18n/angular-locale_es-es.js"></script>
+
+	<script src="app.js"></script>
+	<script src="directives/miListado.js"></script>
+	<script src="services/loginService.js"></script>
+	<script src="controllers/listadoController.js"></script>
+	<script src="controllers/logincontroller.js"></script>
+
+</body>
+</html>

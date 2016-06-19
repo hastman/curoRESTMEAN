@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("id", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("id");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="init" ondrop="drop(event)" ondragover="allowDrop(event)">Aqui!!!</div>
+
+<img id="todrag" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" draggable="true" 
+ondragstart="drag(event)" width="336" height="69">
+
+</body>
+</html>
