@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
         <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,78 @@
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         </head>
 <body>
+
+	<header>
+		<div class="col-md-12">Calcular IMC</div></header>
+	<nav ><div class="col-md-12">Estoy aki</div></nav>
+	<section>
+		<article>
+			<div class="col-md-7">
+				<table id="imcTable" class="table"></table>
+				<button class="btn btn-success" id="generarTabla">Generar Tabla</button>
+			</div>
+		</article>
+	</section>
+	<aside>
+		<form method="post" class="form-horizontal col-md-4">
+				<div class="form-group">
+					  <label class="col-md-4 control-label" for="edad">Nombre</label>
+					  <div class="col-md-4">
+					    <input id="nombre" name="nombre" type="text" placeholder="Pon tu nombre" class="form-control input-md">
+					  </div>
+				</div>
+				<div class="form-group">
+					  <label class="col-md-4 control-label" for="edad">Altura</label>
+					  <div class="col-md-4">
+					    <input id="altura" name="altura" type="number" class="form-control input-md">
+					  </div>
+				</div>
+				<div class="form-group">
+					  <label class="col-md-4 control-label" for="edad">Peso</label>
+					  <div class="col-md-4">
+					    <input id="peso" name="peso" type="number" class="form-control input-md">					    
+					  </div>
+				</div>
+				<div class="form-group">
+				  <label class="col-md-4 control-label" for="enviar"></label>
+				  <div class="col-md-8">
+				    <button id="enviar" name="enviar" class="btn btn-success">Enviar</button>
+				  </div>
+				</div>
+
+			</form>
+	</aside>
+
+	<script type="text/javascript">
+
+		$(document).ready(function  () {
+			
+			$("#enviar").click(function  () {
+				
+				var peso = $("#peso").val();
+				var altura = $("#altura").val()/100;
+				window.localStorage.setItem($("#nombre").val(),(peso/(altura*altura)));
+
+			});
+
+			$("#generarTabla").click(function  () {
+				var keys = Object.keys(window.localStorage).forEach(function  (key) {
+					var value = window.localStorage.getItem(key);
+					var fila = $("<tr/>");
+					$("<td/>",{
+						"text":key
+					}).appendTo(fila);					
+					$("<td/>",{
+						"text":value
+					}).appendTo(fila);
+					fila.appendTo($("#imcTable"))
+
+				})
+			})
+
+		})
+
+	</script>
 
 </body>
 
