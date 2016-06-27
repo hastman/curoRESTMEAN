@@ -20,8 +20,8 @@ router.post('/',function (req,res,next){
 	});
 })
 
-router.get('/:nombre',function (req,res,next){	
-	User.findOne({"name":req.params.nombre},function (err,result) {
+router.get('/:id',function (req,res,next){	
+	User.findOne({"_id":req.params.id},function (err,result) {
 		return res.json(result);
 	});
 });
