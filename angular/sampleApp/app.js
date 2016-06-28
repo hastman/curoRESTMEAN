@@ -3,7 +3,7 @@
 (function(){
 
 	angular.module("sampleApp",['ngRoute'])
-		.constant("backendLocation","http://localhost:3000/users")
+		.constant("backendLocation","http://localhost:3005/users")
 		.constant("routesFolder","templates")
 		.config(["$routeProvider",function ($routeProvider){
 			$routeProvider.when('/alta',{

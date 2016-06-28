@@ -1,0 +1,24 @@
+<style type="text/css">
+	table{
+		border: 1px solid;
+	}
+	td{
+	border: 1px solid;	
+	}
+	.colorblue{
+		background-color: blue
+	}
+	.colorred{
+		background-color: red
+	}
+</style>
+<table>
+	<tr ng-repeat="avion in listado">
+		<td>{{avion.company}}</td>
+		<td>{{avion.destination}}</td>
+		<td>{{avion.origin}}</td>
+		<td>{{avion.departTime | date:'dd/MM/yyyy HH:mm'}}
+		<td ng-class="delayed(avion.delayed)">{{avion.delayed | maskDelayed}}</td>
+		<td><a href="#/{{avion._id}}">Modificar</a></td>
+	</tr>
+</table>

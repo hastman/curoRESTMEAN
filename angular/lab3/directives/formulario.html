@@ -1,0 +1,14 @@
+
+<form>
+
+	<label>Compañia <input type="text" ng-model="avion.company"/></label><br>
+	<label>Origen <input type="text" ng-model="avion.origin"/></label><br>
+	<label>Destino <input type="text" ng-model="avion.destination"/></label><br>
+	<label>Hora de Salida <input type="datetime-local" ng-model="departTimeStr"/></label><br>
+	<label>Retrasado </label>
+	<select ng-model="avion.delayed">
+		<option ng-repeat="estado in estados" value="{{estado.valor}}" >{{estado.label}}</option>
+	</select>
+	<input type="hidden" ng-model="avion._id"/>
+	<button ng-click="enviar()">Enviar</button>
+</form>
